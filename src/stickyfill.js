@@ -7,6 +7,14 @@
 */
 
  module.exports = (function(doc, win) {
+    if (!doc) {
+        doc = document;
+    }
+
+    if (!win) {
+        win = window;
+    }
+
     var watchArray = [],
         scroll,
         initialized = false,
