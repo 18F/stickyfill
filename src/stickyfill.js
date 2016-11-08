@@ -1,4 +1,12 @@
-module.exports = (function(doc, win) {
+/*!
+* Stickyfill -- `position: sticky` polyfill
+* v. 1.1.4 | https://github.com/wilddeer/stickyfill
+* Copyright Oleg Korsunsky | http://wd.dizaina.net/
+*
+* MIT License
+*/
+
+ module.exports = (function(doc, win) {
     var watchArray = [],
         scroll,
         initialized = false,
@@ -446,7 +454,7 @@ module.exports = (function(doc, win) {
     }
 
     //expose Stickyfill
-    win.Stickyfill = {
+    return {
         stickies: watchArray,
         add: add,
         remove: remove,
@@ -456,18 +464,4 @@ module.exports = (function(doc, win) {
         stop: stop,
         kill: kill
     };
-})(document, window);
-
-
-//if jQuery is available -- create a plugin
-if (window.jQuery) {
-    (function($) {
-        $.fn.Stickyfill = function(options) {
-            this.each(function() {
-                Stickyfill.add(this);
-            });
-
-            return this;
-        };
-    })(window.jQuery);
-}
+});
