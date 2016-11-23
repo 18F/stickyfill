@@ -1,4 +1,8 @@
-#`position: sticky` polyfill
+#`position: sticky` polyfill and webmodule.
+
+This repo is a combination of the [wilddeer `position: sticky` polyfill](https://github.com/wilddeer/stickyfill) and the [web module](https://github.com/webmodules/stickyfill) that was created to wrap it. 
+
+This repo is using code from v1.1.4 of [wilddeer/stickyfill](https://github.com/wilddeer/stickyfill) with some minor updates.
 
 The most accurate sticky polyfill out in the wild.
 
@@ -27,8 +31,8 @@ Check out [the demo](http://wd.dizaina.net/en/scripts/stickyfill/) and [use case
 
 Download:
 
-- [stickyfill.min.js](https://raw.github.com/wilddeer/stickyfill/master/dist/stickyfill.min.js) – minified production script
-- [stickyfill.js](https://raw.github.com/wilddeer/stickyfill/master/dist/stickyfill.js) – full development script
+- [stickyfill.min.js](https://raw.github.com/18F/stickyfill/master/dist/stickyfill.min.js) – minified production script
+- [stickyfill.js](https://raw.github.com/18F/stickyfill/master/dist/stickyfill.js) – full development script
 
 Include it on your page:
 
@@ -36,10 +40,15 @@ Include it on your page:
 <script src="path/to/stickyfill.js"></script>
 ```
 
-Also available in [Bower](http://bower.io):
-
+Available using npm:
 ```
-bower install Stickyfill --save
+npm i stickyfill-web-module
+```
+
+You can then require it in your javascript like so
+
+```js
+var Stickyfill = require('stickyfill-web-module')();
 ```
 
 ###Usage
