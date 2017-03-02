@@ -1,6 +1,6 @@
 #`position: sticky` polyfill and webmodule.
 
-This repo is a combination of the [wilddeer `position: sticky` polyfill](https://github.com/wilddeer/stickyfill) and the [web module](https://github.com/webmodules/stickyfill) that was created to wrap it. 
+This repo is a combination of the [wilddeer `position: sticky` polyfill](https://github.com/wilddeer/stickyfill) and the [web module](https://github.com/webmodules/stickyfill) that was created to wrap it.
 
 This repo is using code from v1.1.4 of [wilddeer/stickyfill](https://github.com/wilddeer/stickyfill) with some minor updates.
 
@@ -56,7 +56,7 @@ var Stickyfill = require('stickyfill-web-module')();
 JS:
 
 ```js
-var stickyElements = document.getElementsByClassName('sticky');
+var stickyElements = document.querySelector('.sticky');
 
 for (var i = stickyElements.length - 1; i >= 0; i--) {
     Stickyfill.add(stickyElements[i]);
@@ -138,10 +138,6 @@ Attach event listeners and start watching for stickies in `Stickyfill.stickies`.
 
 Array of parametric objects for all added stickies.
 
-###Using Stickyfill?
-
-Be sure to drop me a link &rarr; [:envelope: wd@dizaina.net](mailto:wd@dizaina.net). Wanna see it in action.
-
 ###License
 
-[MIT license](http://opensource.org/licenses/MIT).
+[MIT license](LICENSE.md).
